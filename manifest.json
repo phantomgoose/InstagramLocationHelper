@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "InstagramLocationHelper",
+    "version": "1.0",
+    "browser_action": {
+        "default_title": "InstagramLocationHelper",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.instagram.com/*"],
+        "js": ["app.js"]
+      }
+    ],
+    "content_security_policy": "script-src 'self' https://maps.googleapis.com",
+    "permissions": [
+        "tabs",
+        "https://*.instagram.com/*"
+    ]
+}
